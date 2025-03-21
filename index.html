@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COBAED Villas 34</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="cobaed.jpg" alt="Logo COBAED" width="60" height="60">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#nosotros"><i class="fas fa-users"></i> Nosotros</a></li>
+                <li><a href="#oferta-educativa"><i class="fas fa-graduation-cap"></i> Oferta Educativa</a></li>
+                <li><a href="#noticias"><i class="fas fa-newspaper"></i> Noticias</a></li>
+                <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bienvenidos a COBAED Villas 34</h1>
+            <p>Formando el futuro de Durango con excelencia académica</p>
+            <a href="#oferta-educativa" class="cta-button">Conoce nuestros programas</a>
+        </div>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+            <defs>
+                <linearGradient id="bg">
+                    <stop offset="0%" style="stop-color:rgba(74, 103, 65, 0.06)"></stop>
+                    <stop offset="50%" style="stop-color:rgba(138, 169, 132, 0.6)"></stop>
+                    <stop offset="100%" style="stop-color:rgba(52, 78, 44, 0.2)"></stop>
+                </linearGradient>
+                <path id="wave" fill="url(#bg)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+            s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
+            </defs>
+            <g>
+                <use xlink:href='#wave' opacity=".3">
+                    <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        dur="10s"
+                        calcMode="spline"
+                        values="270 230; -334 180; 270 230"
+                        keyTimes="0; .5; 1"
+                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                        repeatCount="indefinite" />
+                </use>
+                <use xlink:href='#wave' opacity=".6">
+                    <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        dur="8s"
+                        calcMode="spline"
+                        values="-270 230;243 220;-270 230"
+                        keyTimes="0; .6; 1"
+                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                        repeatCount="indefinite" />
+                </use>
+                <use xlink:href='#wave' opacity=".9">
+                    <animateTransform
+                        attributeName="transform"
+                        attributeType="XML"
+                        type="translate"
+                        dur="6s"
+                        calcMode="spline"
+                        values="0 230;-140 200;0 230"
+                        keyTimes="0; .4; 1"
+                        keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                        repeatCount="indefinite" />
+                </use>
+            </g>
+        </svg>
+    </header>
+
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="grid">
+                <div class="card">
+                    <i class="fas fa-medal feature-icon"></i>
+                    <h3>Excelencia Académica</h3>
+                    <p>Comprometidos con la formación integral de nuestros estudiantes.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chalkboard-teacher feature-icon"></i>
+                    <h3>Profesores Calificados</h3>
+                    <p>Docentes con amplia experiencia y dedicación.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-laptop feature-icon"></i>
+                    <h3>Tecnología Moderna</h3>
+                    <p>Instalaciones equipadas con la última tecnología educativa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="oferta-educativa" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Oferta Educativa</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Bachillerato General</h3>
+                    <p>Formación integral con énfasis en competencias básicas.</p>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+                <div class="card">
+                    <h3>Capacitaciones</h3>
+                    <p>Programas técnicos para desarrollo profesional.</p>
+                    <a href="#" class="btn">Más información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>COBAED Villas 34</h3>
+                    <p>Formando el futuro de Durango</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Dirección del plantel</p>
+                    <p><i class="fas fa-phone"></i> Teléfono</p>
+                    <p><i class="fas fa-envelope"></i> correo@cobaed.edu.mx</p>
+                </div>
+                <div>
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#oferta-educativa">Oferta Educativa</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            // Función para actualizar el enlace activo
+            const updateActiveLink = () => {
+                const hash = window.location.hash || '#inicio';
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === hash) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            };
+
+            // Actualizar en cambio de hash
+            window.addEventListener('hashchange', updateActiveLink);
+            
+            // Actualizar en scroll
+            window.addEventListener('scroll', () => {
+                const sections = document.querySelectorAll('section');
+                let currentSection = 'inicio';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (window.pageYOffset >= sectionTop - 100) {
+                        currentSection = section.id;
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${currentSection}`) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
