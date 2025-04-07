@@ -13,7 +13,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Navbar -->
+  
     <nav class="navbar">
         <div class="container">
             <div class="logo">
@@ -96,12 +96,12 @@
         </g>
     </svg>
     
-    <!-- Botón de scroll down -->
+    
     <div class="scroll-down">
         <i class="fas fa-chevron-down"></i>
     </div>
 </header>
-    <!-- Sección Nosotros -->
+
     <section id="nosotros" class="section">
         <div class="container">
             <h2 class="section-title">Sobre Nosotros</h2>
@@ -129,7 +129,6 @@
         </div>
     </section>
 
-    <!-- Sección Oferta Educativa -->
     <section id="oferta-educativa" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Oferta Educativa</h2>
@@ -178,7 +177,7 @@
         </div>
     </section>
 
-    <!-- Nueva sección de Noticias -->
+  
     <section id="noticias" class="section">
         <div class="container">
             <h2 class="section-title">Noticias y Eventos</h2>
@@ -189,35 +188,127 @@
                         <span class="month">Mar</span>
                     </div>
                     <h3>Convocatoria de inscripciones 2025</h3>
-                    <p class="fade-in">Ya están abiertas las inscripciones para el ciclo escolar 2025-2026. No pierdas la oportunidad de ser parte de nuestra comunidad educativa.</p>
-                    <a href="#" class="btn btn-sm">Leer más</a>
+                    <p class="fade-in">
+                        Ya están abiertas las inscripciones para el ciclo escolar 2025-2026. 
+                        No pierdas la oportunidad de ser parte de nuestra comunidad educativa.
+                    </p>
+                
+                    <button id="abrir-modal-inscripcion" class="btn btn-sm">
+                        <i class="fas fa-eye"></i> Ver Requisitos de Inscripción
+                    </button>
                 </div>
+
                 <div class="card news-card">
                     <div class="news-date">
                         <span class="day">28</span>
                         <span class="month">Feb</span>
                     </div>
-                    <h3>Concurso estatal de conocimientos</h3>
-                    <p class="fade-in">Nuestros estudiantes obtuvieron el primer lugar en el concurso estatal de matemáticas y física.</p>
+                    <h3>Evento de Orientación Vocacional</h3>
+                    <p class="fade-in">
+                        Estudiantes de nuevo ingreso podrán asistir a una charla de orientación vocacional 
+                        el próximo mes. ¡Entérate de todo lo que necesitas saber!
+                    </p>
                     <a href="#" class="btn btn-sm">Leer más</a>
                 </div>
-                <div class="card news-card">
-                    <div class="news-date">
-                        <span class="day">10</span>
-                        <span class="month">Feb</span>
-                    </div>
-                    <h3>Programa de becas 2025</h3>
-                    <p class="fade-in">Conoce los requisitos y fechas para aplicar a nuestro programa de becas por excelencia académica.</p>
-                    <a href="#" class="btn btn-sm">Leer más</a>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="#" class="btn">Ver todas las noticias</a>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Contacto Mejorada -->
+   
+    <div id="modal-inscripcion-visible" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Requisitos para Inscripción</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="requirements-container">
+                    <div class="requirement-item">
+                        <div class="requirement-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <div class="requirement-info">
+                            <h3>Documentación Personal</h3>
+                            <ul>
+                                <li>CURP actualizada</li>
+                                <li>Acta de nacimiento (original y copia)</li>
+                                <li>Identificación oficial del padre/tutor</li>
+                                <li>Comprobante de domicilio reciente</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="requirement-info">
+                            <h3>Documentación Académica</h3>
+                            <ul>
+                                <li>Certificado de secundaria (original y copia)</li>
+                                <li>Constancia de calificaciones reciente</li>
+                                <li>Carta de buena conducta</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-icon">
+                            <i class="fas fa-file-medical"></i>
+                        </div>
+                        <div class="requirement-info">
+                            <h3>Salud</h3>
+                            <ul>
+                                <li>Certificado médico reciente</li>
+                                <li>Tipo de sangre</li>
+                                <li>Cartilla de vacunación actualizada</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="requirement-item">
+                        <div class="requirement-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <div class="requirement-info">
+                            <h3>Proceso de Inscripción</h3>
+                            <ol>
+                                <li>Realizar pago de inscripción ($500 MXN)</li>
+                                <li>Presentar documentación completa</li>
+                                <li>Completar formulario de inscripción</li>
+                                <li>Asistir a entrevista de orientación</li>
+                                <li>Asistir a sesión de inducción</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dates-container">
+                    <h3><i class="fas fa-calendar-alt"></i> Fechas Importantes</h3>
+                    <ul class="dates-list">
+                        <li><strong>15 de Mayo - 15 de Julio:</strong> Periodo de inscripción temprana</li>
+                        <li><strong>16 de Julio - 10 de Agosto:</strong> Periodo regular de inscripción</li>
+                        <li><strong>12 de Agosto:</strong> Inicio de clases</li>
+                    </ul>
+                </div>
+
+                <div class="contact-info-compact">
+                    <h3><i class="fas fa-info-circle"></i> Para más información</h3>
+                    <p>Teléfono: (aún no disponible)</p>
+                    <p>Correo: plantel34@cobaed.mx</p>
+                    <p>Horario de atención: Lunes a Viernes 8:00 AM - 8:00 PM</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn"><i class="fas fa-pencil-alt"></i> Iniciar Proceso de Inscripción</button>
+                <button class="btn-secondary close-modal-btn"><i class="fas fa-times"></i> Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+  
+
+
     <section id="contacto" class="section section-alt">
         <div class="container">
             <h2 class="section-title">Contacto</h2>
@@ -333,7 +424,7 @@
     </footer>
 
    
-    <!-- JavaScript -->
+    
     <script src="script.js"></script>
 </body>
 </html>

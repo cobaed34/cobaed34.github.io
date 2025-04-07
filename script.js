@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Variables
+    
     const navbar = document.querySelector('.navbar');
     const menuBtn = document.querySelector('.menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const scrollDownBtn = document.querySelector('.scroll-down');
     const fadeElements = document.querySelectorAll('.fade-in');
     
-    // Menú móvil toggle
+    
     menuBtn.addEventListener('click', function() {
         navLinks.classList.toggle('show');
     });
     
-    // Cerrar menú al hacer clic en un enlace
+    
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', function() {
             navLinks.classList.remove('show');
         });
     });
     
-    // Navbar fijo al hacer scroll
+
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.remove('scrolled');
         }
         
-        // Animación de elementos al hacer scroll
+       
         fadeElements.forEach(element => {
             const elementTop = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
@@ -36,11 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Actualizar enlace activo según la sección visible
+   
         updateActiveNavLink();
     });
     
-    // Scroll hacia abajo al hacer clic en el botón
+    
     if (scrollDownBtn) {
         scrollDownBtn.addEventListener('click', function() {
             const firstSection = document.querySelector('#nosotros');
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Actualizar enlace activo en el navbar según la sección visible
+    
     function updateActiveNavLink() {
         const sections = document.querySelectorAll('section, header');
         const navItems = document.querySelectorAll('.nav-links a');
@@ -74,26 +74,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Inicializar animaciones
+   
     setTimeout(() => {
         document.querySelectorAll('.card, .section-title, .section-description').forEach(element => {
             element.classList.add('animated', 'fadeInUp');
         });
     }, 300);
     
-    // Validación de formulario
+    
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Aquí iría la lógica para enviar el formulario
-            // Por ahora solo mostraremos un mensaje de éxito simulado
+            
             
             const formData = new FormData(contactForm);
             let formIsValid = true;
             
-            // Validación básica
+            
             formData.forEach((value, key) => {
                 if (value.trim() === '' && key !== 'tel') {
                     formIsValid = false;
@@ -101,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (formIsValid) {
-                // Simulación de envío
+               
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
                 
@@ -109,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
                 
                 setTimeout(() => {
-                    // Crear un mensaje de éxito
+                 
                     const successMessage = document.createElement('div');
                     successMessage.className = 'success-message';
                     successMessage.innerHTML = '<i class="fas fa-check-circle"></i> ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.';
@@ -133,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                     
-                    // Eliminar el mensaje después de 5 segundos
+                   
                     setTimeout(() => {
                         successMessage.style.opacity = '0';
                         successMessage.style.transition = 'opacity 0.5s ease';
@@ -149,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Inicializar animación de fade-in para elementos visibles inicialmente
+
     fadeElements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
@@ -159,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Suavizar desplazamiento para enlaces de anclaje
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -177,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Efecto de parallax para el hero
+    
     window.addEventListener('scroll', function() {
         const hero = document.querySelector('.hero');
         if (hero) {
@@ -186,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Newsletter form
+   
     const newsletterForm = document.querySelector('.newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
@@ -194,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const emailInput = this.querySelector('input[type="email"]');
             if (emailInput.value.trim() !== '') {
-                // Simulación de suscripción
+              
                 const submitBtn = this.querySelector('button');
                 const originalIcon = submitBtn.innerHTML;
                 
@@ -202,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
                 
                 setTimeout(() => {
-                    // Crear mensaje de confirmación
+                    
                     const confirmationMsg = document.createElement('p');
                     confirmationMsg.textContent = '¡Gracias por suscribirte!';
                     confirmationMsg.style.cssText = `
@@ -220,4 +219,34 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    
+    const modalInscripcion = document.getElementById('modal-inscripcion-visible');
+    const btnAbrirModal = document.getElementById('abrir-modal-inscripcion');
+    const cerrarModal = document.querySelectorAll('.close-modal, .close-modal-btn');
+    
+    
+    if (btnAbrirModal) {
+        btnAbrirModal.addEventListener('click', function(e) {
+            e.preventDefault();
+            modalInscripcion.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; 
+        });
+    }
+    
+ 
+    cerrarModal.forEach(element => {
+        element.addEventListener('click', function() {
+            modalInscripcion.style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+        });
+    });
+    
+    
+    window.addEventListener('click', function(event) {
+        if (event.target == modalInscripcion) {
+            modalInscripcion.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
 });
